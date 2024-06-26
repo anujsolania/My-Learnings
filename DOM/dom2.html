@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+
+<body>
+
+    <script>
+        
+        
+        function myfn1(x) {
+            const fname = document.getElementById("fname").value
+            const lname = document.getElementById("lname").value
+
+            if (x ==1) {
+                h2.innerHTML = `Heyy ${fname} ${lname}\n `
+            }
+            if (x == 2) {
+                h3.innerHTML = `${fname}\t${lname}`
+            }
+            
+           
+        }
+        
+    </script>
+
+    <form id="loginform">
+      First name: <input type="text" id="fname" placeholder="enter name"><br>
+      Last name: <input type="text" id="lname" placeholder="enter surname"><br><br>
+      <button type="button" id="btn1" onclick="myfn1(1)">SUBMIT</button>
+    </form>
+
+
+    <h3 id="h2"></h1>
+   
+    <p>Click on the "TRY IT" button to know the form elements.</p>
+    <button onclick="myfn1(2)" id="btn2">TRY IT</button>
+
+    <h3 id="h3"></h1>
+    
+    <p class="intro">Hello world</p>
+    <p class="intro">Namaste</p>
+    <p id="demo"></p>
+
+    <div id="container">
+     <p class="example">heading 1</p>
+     <p class="example">heading 2</p>
+     <p class="example">heading 3</p>
+    </div>
+    <p id="empty">hello</p>
+    <h2 onclick='this.innerHTML= "You Clicked!!"' >CLICK ME!</h2>
+    <button id="btn3">TRY ME</button>
+
+    <script>
+        document.getElementById("btn3").addEventListener("click", myfn2);
+        function myfn2() {
+         alert("YOU TRIED");
+        }
+    </script>
+
+    
+    
+    
+</body>
+</html>

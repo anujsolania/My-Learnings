@@ -1,0 +1,80 @@
+<html>
+    <body>
+            <input id="title" type="text" placeholder="title"><br><br>
+            <input id="description" type="text" placeholder="description"><br><br>
+            <!-- <button onclick="appenddata()">done</button><br><br> -->
+            <div id="container"></div>
+
+        <script>
+            let globalid = 1
+            function markasdone(divid) {
+                let parent = document.getElementById(divid)
+                parent.children[2].innerHTML = "Done!"
+                event.preventDefault()
+            }
+    
+            function createparent(title,description,id) {
+                let parent = document.createElement("div")
+                let child1 = document.createElement("div")
+                child1.innerHTML = title
+                let child2 = document.createElement("div")
+                child2.innerHTML = description
+                let child3 = document.createElement("button")
+                child3.innerHTML = "Mark As Done!"
+                child3.setAttribute("onclick", `markasdone(${id})`)
+    
+                parent.appendChild(child1)
+                parent.appendChild(child2)
+                parent.appendChild(child3) 
+                parent.setAttribute("id", id)
+                return parent
+    
+            }
+    
+            function appenddata() {
+                const title = document.getElementById("title").value
+                const description = document.getElementById("description").value
+                const grandparent = document.getElementById("container")
+            
+                grandparent.appendChild(createparent(title,description,globalid))
+                globalid++
+                event.preventDefault()
+            }
+    
+            function updateDOM(state) {
+                let parent = document.getElementById("container")
+                parent.innerHTML = ""
+                for (let i = 0; i < state.length; i++) {
+                    let child = createparent(state[i].title, state[i].description, state[i].id)
+                    parent.appendChild(child)
+                }
+            }
+            
+            // updateDOM([{
+            //     title: "Go to gym",
+            //     description: "From 7 to 9 pm",
+            //     id: 1
+            // }, {
+            //     title: "Go to library",
+            //     description: "From 7 to 9 pm",
+            //     id: 2
+            // }])
+
+            window.setInterval(async function () {
+                const res = await fetch("https://sum-server.100xdevs.com/todo")
+                const json = await res.json()
+                updateDOM(json.todos)
+            },5000)
+
+            
+    
+        </script>
+
+
+    </body>
+
+    
+
+    
+
+</html>
