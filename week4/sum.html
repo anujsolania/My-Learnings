@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>sum</title>
+        <script>
+
+        </script>
+    </head>
+    <body>
+        <input type="text" placeholder="enter num1" id="box1" style="margin: 10px">
+        <br>
+        <input type="text" placeholder="enter num2" id="box2" style="margin: 10px">
+        <br>
+        <button onclick="calculatesum()" style="margin: 10px">CALCULATE SUM</button>
+
+        <h3 id="heading"></h3>
+
+        
+
+        <!-- js -->
+         <script>
+            function calculatesum() {
+                const num1 = parseFloat(document.getElementById("box1").value)
+                const num2 = parseFloat(document.getElementById("box2").value)
+                const ans = num1+num2
+
+                document.getElementById("heading").innerText = "Sum : "+ans
+            }
+
+    
+         </script>
+    </body>
+</html>

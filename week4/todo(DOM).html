@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            function addTodo() {
+                const title = document.getElementById("title").value
+                const description = document.getElementById("description").value
+
+                console.log(title,description)
+
+                const outerdiv = document.getElementById("todoadd")
+                const innerdiv = document.createElement("div") 
+
+                const titlepara = document.createElement("p")
+                titlepara.innerText = title
+                const descriptionpara = document.createElement("p")
+                descriptionpara.innerText = description
+
+                const btn1 = document.createElement("button")
+                btn1.innerText = "MARK AS DONE"
+                btn1.style.marginRight = "5px"
+
+                const btn2 = document.createElement("button")
+                btn2.innerText = "REMOVE"
+                btn2.style.marginRight = "5px"
+
+                innerdiv.append(titlepara)    
+                innerdiv.append(descriptionpara)
+                innerdiv.append(btn1,btn2)
+                outerdiv.append(innerdiv)
+
+                btn1.addEventListener("click",() => { btn1.innerText = "DONE" })
+                btn2.addEventListener("click",() => { innerdiv.remove() })
+            }
+
+            function removeAllTodo() {
+              const outerdiv = document.getElementById("todoadd")
+              outerdiv.innerHTML = ""
+            }
+
+        </script>
+        <input type="text" id="title" placeholder="Todo title"></input> <br /><br />
+        <input type="text" id="description" placeholder="Todo description"></input> <br /><br />
+        <button onclick="addTodo()" style="margin-right: 5px;" >ADD</button>
+        <button onclick="removeAllTodo()" >REMOVE ALL</button>
+
+        <div id="todoadd"></div>
+    </body>
+</html>
