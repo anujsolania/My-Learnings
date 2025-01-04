@@ -4,6 +4,6 @@ import { useContext } from "react";
 import { CounterContext } from "./Context";
 
 export function CounterDisplay() {
-  const { count } = useContext(CounterContext);
+  const [ count ] = useContext(CounterContext);
   return <p>Count: {count}</p>;
 }

@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { CounterContext } from "./Context";
 
 export function CounterButton() {
-    const { setCount } = useContext(CounterContext);
+    const [_, setCount ] = useContext(CounterContext);
     return (
       <button onClick={() => setCount(prevCount => prevCount + 1)}>
         Increment
