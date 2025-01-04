@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import { Provider } from './components/Context';
 import { CounterDisplay } from './components/CounterDisplay';
 import { CounterButton } from './components/CounterButton';
