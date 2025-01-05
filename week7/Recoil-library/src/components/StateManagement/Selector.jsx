@@ -8,4 +8,5 @@ export const EvenOddSelector = selector({
         const count = get(countstate)
         return count%2 == 0? "EVEN" : "ODD"
     }
+    //get : async ({get}) => async data query for fething data 
 })
