@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.colordiv {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.colortab {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: aqua;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.colordiv .colortab .btn {
+    border: 0px;
+    border-radius: 8px;
+    padding: 10px;
+    color: black;
+}
