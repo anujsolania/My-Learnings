@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: cadetblue;
+}
+
+.parentDiv .inputDiv input{
+    width: 40%;
+    padding: 15px;
+}
+
+.parentDiv {
+    height: 100vh;
+    width: 100vw;
+}
+
+.parentDiv .inputDiv button{
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-left: 2%;
+    background-color: black;
+    color: white;
+
+}
+
+.parentDiv h1 {
+    text-align: center;
+    margin: 2%;
+}
+
+.parentDiv .inputDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.parentDiv .cardDiv {
+    width: 35%;
+    height: 40%;
+    margin: auto;
+    margin-top: 5%;
+
+    border-style:groove;
+    border-radius: 10px;
+
+}
+
+.parentDiv .cardDiv img {
+    border-radius: 50%;
+    width: 30%;
+    margin-right: 10%;
+    margin-top: 5%;
+}
+
+.parentDiv .cardDiv .profileDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.parentDiv .cardDiv .profileDiv .nameDiv {
+    font-size:x-large;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.dataDiv {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+    margin-top: 10%;
+    font-size:large;
+}
+
