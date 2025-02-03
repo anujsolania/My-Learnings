@@ -3,7 +3,7 @@ import "../css/cards.css"
 export function Cards({name,setmode}) {
     return (
         <div className="parentdiv" >
-            <h2>Happy birthday {name} ✨🎂</h2>
+            <h1>Happy birthday {name} ✨🎂</h1>
             <div className="cards" >
             <div className="card1" >
             <p>“Wishing you a day filled with love, laughter, and all the happiness in the world! May this year bring you success, good health, and endless joy. Happy Birthday!” 🎉🎂</p>
