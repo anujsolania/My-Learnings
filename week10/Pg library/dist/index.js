@@ -9,9 +9,10 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+require('dotenv').config();
 const pg_1 = require("pg");
 const client = new pg_1.Client({
-    connectionString: "postgresql://Anuj%20Solania:npg_Cjxb8oRrEA2O@ep-shy-bonus-a1yy4ltf-pooler.ap-southeast-1.aws.neon.tech/Database%201?sslmode=require"
+    connectionString: process.env.POSTGRES_URL
 });
 function createUserstable() {
     return __awaiter(this, void 0, void 0, function* () {

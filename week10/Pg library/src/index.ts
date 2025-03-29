@@ -1,7 +1,9 @@
+require('dotenv').config()
+
 import { Client } from "pg";
 
 const client = new Client({
-    connectionString: "postgresql://Anuj%20Solania:npg_Cjxb8oRrEA2O@ep-shy-bonus-a1yy4ltf-pooler.ap-southeast-1.aws.neon.tech/Database%201?sslmode=require"
+    connectionString: process.env.POSTGRES_URL
 })
 
 async function createUserstable() {
