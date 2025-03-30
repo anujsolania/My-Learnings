@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 require('dotenv').config();
 const pg_1 = require("pg");
 const client = new pg_1.Client({
-    connectionString: process.env.POSTGRES_URL
+    connectionString: process.env.DATABASE_URL
 });
 function createUserstable() {
     return __awaiter(this, void 0, void 0, function* () {
@@ -94,5 +94,5 @@ function getUserandAddress(user_id) {
 // updateUser("jaii2","jai@gmail.com")
 // getUsers()
 // createAddresstable()
-// insertAddress(1,"sushant","ghaziabad","india")
-getUserandAddress(1);
+insertAddress(1, "sushant", "ghaziabad", "india");
+// getUserandAddress(1)

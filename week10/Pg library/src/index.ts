@@ -3,7 +3,7 @@ require('dotenv').config()
 import { Client } from "pg";
 
 const client = new Client({
-    connectionString: process.env.POSTGRES_URL
+    connectionString: process.env.DATABASE_URL
 })
 
 async function createUserstable() {
@@ -87,5 +87,5 @@ async function getUserandAddress(user_id: number) {
 // updateUser("jaii2","jai@gmail.com")
 // getUsers()
 // createAddresstable()
-// insertAddress(1,"sushant","ghaziabad","india")
-getUserandAddress(1)
+insertAddress(1,"sushant","ghaziabad","india")
+// getUserandAddress(1)
