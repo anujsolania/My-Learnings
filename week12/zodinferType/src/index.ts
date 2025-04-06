@@ -13,3 +13,11 @@ const user: User = {
     email: "anuj@gnakcn",
     age: 30
 }
+
+const stringToNumber = z.string().transform((val) => val.length);
+
+type input = z.infer<typeof stringToNumber>  //default output
+
+type output = z.output<typeof stringToNumber>
+type input1 = z.input<typeof stringToNumber>
+
