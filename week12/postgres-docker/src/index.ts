@@ -15,12 +15,21 @@ client.connect(err => {
   }
 });
 
-client.query('SELECT NOW()', (err, res) => {
-  if (err) {
-    console.error(err);
-  } else {
-    console.log(res.rows[0]);
-  }
 
-  client.end();
-});
+async function createtable() {
+  const query = `
+    CREATE TABLE addresses (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    city VARCHAR(100) NOT NULL,
+    country VARCHAR(100) NOT NULL,
+    street VARCHAR(255) NOT NULL,
+    pincode VARCHAR(20),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
+`
+  await client.query(createtable)
+  await client.end()
+}
+// createtable()
