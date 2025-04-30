@@ -10,7 +10,7 @@ export default async function datapage() {
             <div className="flex w-full justify-center items-center" >
             <div className="border p-4" >
             Name: {userdata.username}<br></br>
-            city: {"hulucgaduc@gmail.com"}
+            city: {"hardcoded@gmail.com"}
             </div>
             </div>
         </div>
