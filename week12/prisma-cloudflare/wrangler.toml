@@ -1,0 +1,8 @@
+name = "hono-prisma-worker"
+main = "src/index.ts"
+compatibility_date = "2024-04-08"
+compatibility_flags = ["nodejs_compat"]
+
+
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiZTNhMjUzYzQtMzYyMS00MzZjLTk2MWQtNzYyMmNmNTY2ODFmIiwidGVuYW50X2lkIjoiYzc0Y2M1Y2M2OTMyOTYyZTg2NzM2MjdhZGMzYjM5NWRiNmIzZGM3MjNmMTE0ZDcxNmFiYTA1NjU3Njg0OTgxNiIsImludGVybmFsX3NlY3JldCI6IjM5YjIzZDk2LTZjZmUtNGMwNy05NzBjLTM4M2I3ODk2Y2RmMiJ9.uqazOdCCc6WS3ujiS_aCf-umwRxZeNWEZOODAn_-SKo"
