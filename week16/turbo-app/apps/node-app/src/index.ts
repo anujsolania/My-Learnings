@@ -1,12 +1,12 @@
 import express from "express";
-import { NUMBER } from "@repo/common";
+import { secret2 } from "@repo/common";
 
 const app = express()
 
-console.log(NUMBER)
+console.log(secret2)
 app.get("/", (req, res) => {
     res.json({
-        message: `hello world ${NUMBER}`
+        message: `hello world ${secret2}`
     });
 })
 
