@@ -23,8 +23,9 @@ app.post("/signin",(req,res) => {
 })
 
 app.get("/user",(req,res) => {
-    const token = req.headers.cookie
+    const token = req.cookies.token
 
+    console.log("Received token:", token)
     const verified = jwt.verify(token!, JWT_SECRET) as JwtPayload
     res.send(verified.userid)
 })

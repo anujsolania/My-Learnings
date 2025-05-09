@@ -22,7 +22,8 @@ app.post("/signin", (req, res) => {
     res.send("Logged innn");
 });
 app.get("/user", (req, res) => {
-    const token = req.headers.cookie;
+    const token = req.cookies.token;
+    console.log("Received token:", token);
     const verified = jsonwebtoken_1.default.verify(token, JWT_SECRET);
     res.send(verified.userid);
 });
