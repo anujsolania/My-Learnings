@@ -1,2 +1,2 @@
 
-export const NUMBER = 1;
+export const secret2 = "bda secret h bro";
