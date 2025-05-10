@@ -1,5 +1,11 @@
 
 import CredentialsProvider from 'next-auth/providers/credentials';
+import Github from 'next-auth/providers/github';
+import GithubProvider from 'next-auth/providers/github';
+import Google from 'next-auth/providers/google';
+import GoogleProvider from "next-auth/providers/google";
+import { signIn } from 'next-auth/react';
+import { pages } from 'next/dist/build/templates/app-page';
 
 export const NEXT_AUTH = {
   providers: [
@@ -17,7 +23,17 @@ export const NEXT_AUTH = {
                 email: "anuj@gmaul.com"
             };
         },
+      }),
+     Google({
+        clientId: process.env.GOOGLE_CLIENT_ID || "" ,
+        clientSecret: process.env.GOOGLE_CLIENT_SECRET || ""
+      }),
+      Github({
+        clientId: process.env.GITHUB_CLIENT_ID || "",
+        clientSecret: process.env.GITHUB_CLIENT_SECRET || ""
+    
       })
+
   ],
   secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
@@ -34,5 +50,8 @@ export const NEXT_AUTH = {
         }
         return session
     }
+  },
+  pages: {
+    signIn: "/signin"
   }
 }
