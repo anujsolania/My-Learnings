@@ -8,12 +8,12 @@ export default function() {
     return <div>
         <button onClick={async () => {
             await signIn("google")
-        }}>Login with google</button>
+        }}>SignIN by Gmail</button>
 
         <br />
-        <button onClick={async () => {
+        {/* <button onClick={async () => {
             await signIn("github")
-        }}>Login with Github</button>
+        }}>Login with Github</button> */}
         <br />
         <button onClick={async () => {
             const res = await signIn("credentials", {
